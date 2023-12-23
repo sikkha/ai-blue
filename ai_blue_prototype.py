@@ -14,10 +14,10 @@ from datetime import datetime, timedelta
 import textwrap
 
 # Define the API keys at the start of the script
-METAPHOR_API_KEY="YOUR_METAPHOR_KEY"
-GOOGLE_API_KEY = "YOUR_GOOGLE_KEY"
-MISTRAL_API_KEY = "YOUR_MISTRAL_KEY"
-OPENAI_API_KEY = "YOUR_OPENAI_KEY"
+METAPHOR_API_KEY="metaphor_api_key"
+GOOGLE_API_KEY = "google_api_key"
+MISTRAL_API_KEY = "mistral_api_key"
+#OPENAI_API_KEY = "openai_api_key"
 
 def get_api_key(model):
     """Retrieve API key based on model selection."""
@@ -321,9 +321,13 @@ def engage_response(message, history):
     #almighty = devil_advocate(message, gradient) 
     global ai_choice 
 
+    # Transform message_history into a single string
+    context = ' '.join(message_history)
+ 
+
     print(ai_choice)
     if ai_choice == "Solo":
-    	almighty = call_LLM("gemini-pro", message)  
+    	almighty = call_LLM("gemini-pro", context)  
 
     elif ai_choice == "MultiHead":
     	almighty = multihead_model(message, gradient)  
