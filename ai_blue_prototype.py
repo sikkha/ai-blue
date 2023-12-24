@@ -312,6 +312,20 @@ def devil_advocate2_concurrent(prompt, gradient):
     return final_summary
 
 
+def add_to_history(message_history, user_message, chatbot_response, max_length=3):
+    # Combine the user message and chatbot response into one entry
+    dialogue_entry = "|User: " + user_message + " Chatbot: " + chatbot_response
+
+    # Add the new entry to the history
+    message_history.append(dialogue_entry)
+
+    # Ensure the history doesn't exceed the maximum length
+    while len(message_history) > max_length:
+        # Remove the oldest entry (the first one in the list)
+        message_history.pop(0)
+
+    return message_history
+
 
 def engage_response(message, history):
 
@@ -363,6 +377,7 @@ def engage_response(message, history):
     # debug
     #print(ai_choice)
     if ai_choice == "Solo":
+    	#almighty = call_LLM("mistral", dialogue_data)  
     	almighty = call_LLM("gemini-pro", dialogue_data)  
     	#almighty = call_LLM("openai", dialogue_data)  
 
@@ -384,7 +399,9 @@ def engage_response(message, history):
     #zipped_output = call_LLM("gemini-pro", zip_command)  
     # Append the model's response to the history
     #message_history.append(zipped_output)
-    message_history.append(" User: " + message + " Chatbot: " + almighty)
+    #message_history.append(" User: " + message + " Chatbot: " + almighty)
+    message_history = add_to_history(message_history, message, almighty)
+
 
     # debug 
     #print(message_history)
