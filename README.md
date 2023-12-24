@@ -8,10 +8,11 @@ AI-blue is a cutting-edge multihead AI integration platform designed to analyze 
 
 ### Prerequisites
 
-Ensure you have Python installed on your system. AI-blue is built to be simple and straightforward, requiring only two main files to function:
+Ensure you have Python installed on your system. AI-blue is built to be simple and straightforward, requiring only three main files to function:
 
 1. `requirements.txt` - Lists all the necessary Python packages.
 2. `ai_blue_prototype.py` - The main Python script for the AI-blue model.
+3. `session_manager.py` - The user session management engine.
 
 ### Installation
 
@@ -28,9 +29,14 @@ Ensure you have Python installed on your system. AI-blue is built to be simple a
    pip install -r requirements.txt
    \```
 
+
 ### Running the Application
 
 To run AI-blue, use the following command:
+
+\```sh
+nohup python session_manager.py &
+\```
 
 \```sh
 nohup python ai_blue_prototype.py &
