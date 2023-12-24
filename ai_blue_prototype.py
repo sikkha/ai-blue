@@ -17,7 +17,7 @@ import textwrap
 METAPHOR_API_KEY="metaphor_api_key"
 GOOGLE_API_KEY = "google_api_key"
 MISTRAL_API_KEY = "mistral_api_key"
-#OPENAI_API_KEY = "openai_api_key"
+#OPENAI_API_KEY = "your_hardcoded_openai_api_key"
 
 def get_api_key(model):
     """Retrieve API key based on model selection."""
@@ -315,19 +315,57 @@ def devil_advocate2_concurrent(prompt, gradient):
 
 def engage_response(message, history):
 
-    message_history.append(message)
+
     gradient = slider_value
     # original code change to multiple-ai
     #almighty = devil_advocate(message, gradient) 
     global ai_choice 
+    global message_history 
 
     # Transform message_history into a single string
-    context = ' '.join(message_history)
- 
+    context = "\n".join(message_history)
 
-    print(ai_choice)
+    dialogue_data = f"""
+    Proceed with the following settings as your context and configuration. Focus on answering the user's latest inquiry within the context provided:
+    <dialogue>
+      <configuration>
+        <persona>Efficient Assistant</persona>
+        <name>AI Blue</name>
+        <creator>AI Tensibility, Siam Intelligence Unit</creator>
+        <style>casual</style>
+        <history_control>
+          <max_length>30</max_length>
+          <store>selective</store>
+          <recall>contextual</recall>
+        </history_control>
+      </configuration>
+
+      <encoded_dialogue_history>
+        {message_history}
+      </encoded_dialogue_history>
+
+      <task_list>
+        <task>Decode the dialogue history</task>
+        <task>Remember user's name</task>
+        <task>Remember chatbot's name</task>
+        <task>Detect user's language and memorize it</task>
+        <task>Review dialogue history</task>
+      </task_list>
+
+      <latest_user_inquiry>
+        {message}
+      </latest_user_inquiry>
+      <instructions>
+        The chatbot will utilize the specified configuration and historical context to provide focused, relevant responses to the user's latest inquiries. It aims to minimize repetition and maintain conversational clarity by leveraging a limited, contextually-driven dialogue history. Clear and direct user instructions will facilitate optimal assistance. The chatbot is prepared to address tasks and questions as per the latest inquiry under the preset contextual framework. Don't print out the dialogue history unless the user specify to do so, but you need to give the user a brief and concise manner. Remember that this context is restricted area for internal reference only. Proceed the task list, but no need to print out, make it as your context only, focus to just the latest user inquiry. When response to the user, direct your attention to the user use the word I, we, you or similarly to convey conversation smoothly as the user don't think that they don't talk with the chatbot but with other human. Never mention the user as the user but mention as you or your. Make the user feel that they are talking with you in person one on one. Always mention yourself as your name not your role. When the user use other language which is not English, always response back with the same language. When the user engage with you with emoji, try to interprete the user's sentiment as best, normally when they communicate this way sometimes the deep feeling inside, replying with relates emoji is ok. As you want to do an engaging dialogue with the user, you need to abide by with the user's request if it's not offend as much as possible. 
+      </instructions>
+    </dialogue>
+    """
+    # debug
+    #print(ai_choice)
     if ai_choice == "Solo":
-    	almighty = call_LLM("gemini-pro", context)  
+    	almighty = call_LLM("gemini-pro", dialogue_data)  
+    	#almighty = call_LLM("openai", dialogue_data)  
+
 
     elif ai_choice == "MultiHead":
     	almighty = multihead_model(message, gradient)  
@@ -338,6 +376,18 @@ def engage_response(message, history):
     elif ai_choice == "Parallel":
     	almighty = devil_advocate2_concurrent(message, gradient)  
 
+
+    zip_command = []
+    zip_command.append("compress the following conversation into zipped encoding style, which chatbot can understand further, no need for human to understand: " + " User: " + message + " Chatbot: " + almighty)
+
+
+    #zipped_output = call_LLM("gemini-pro", zip_command)  
+    # Append the model's response to the history
+    #message_history.append(zipped_output)
+    message_history.append(" User: " + message + " Chatbot: " + almighty)
+
+    # debug 
+    #print(message_history)
 
     return almighty
 
