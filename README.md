@@ -44,7 +44,7 @@ nohup python ai_blue_prototype.py &
 
 Alternatively, you can use `screen` for session management.
 
-AI-blue listens on port `192.0.0.1:7860`. You can experiment with the live model at:
+AI-blue listens on port `192.0.0.1:7860` and the database session listens to port `192.0.0.1:5001`. You can experiment with the live model at:
 
 - Local: `http://192.0.0.1:7860/`
 - Public IP: `http://34.121.86.8:7860/`
