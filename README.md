@@ -14,6 +14,11 @@ Ensure you have Python installed on your system. AI-blue is built to be simple a
 2. `ai_blue_prototype.py` - The main Python script for the AI-blue model.
 3. `session_manager.py` - The user session management engine.
 
+### Option
+
+We've created the showcase for LLamaindex and Trulen to evaluate RAG and ChromaDB, but it doesn't use in the AI Blue yet. It will be explored to generate more document RAG Agent later.
+4. `showcase_leaderboard.py` - Showcase for LLamaIndex, RAG, ChromaDB and Trulen evaluation leaderboard.
+
 ### Installation
 
 1. Clone the repository:
