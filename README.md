@@ -16,7 +16,7 @@ Ensure you have Python installed on your system. AI-blue is built to be simple a
 
 ### Option
 
-We've created the showcase for LLamaindex and Trulen to evaluate RAG and ChromaDB, but it doesn't use in the AI Blue yet. It will be explored to generate more document RAG Agent later.
+We've created a showcase for LLamaindex and Trulen to evaluate RAG and ChromaDB. However, it hasn't been used in AI Blue yet. It will be explored further to generate more documents with the RAG Agent later.
 
 4. `showcase_leaderboard.py` - Showcase for LLamaIndex, RAG, ChromaDB and Trulen evaluation leaderboard.
 
