@@ -56,6 +56,10 @@ AI-blue listens on port `192.0.0.1:7860` and the database session listens to por
 - Public IP: `http://34.121.86.8:7860/`
 - Short URL: [bit.ly/ai-blue](http://bit.ly/ai-blue)
 
+#### Note: 
+
+AI Blue will collect user session information, including data from cookies, to personalize the experience for each individual interacting with it. If you prefer not to have your data collected, please download AI Blue and compile it on your own local system. The database will be stored in ``session.db''. You can access the database by using the command `sqlite3 sessions.db'. Within it, you can retrieve data using the command `SELECT * FROM sessions;'.
+
 ## Concept and Algorithm
 
 AI-blue utilizes a multihead AI approach where different AI models analyze the input data concurrently. Each model focuses on its area of expertise, and their outputs are then routed through a central "router" model. The router intelligently integrates these insights based on predefined weights and contextual understanding, producing a comprehensive and nuanced response.
