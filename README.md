@@ -4,6 +4,8 @@
 
 AI-blue is a cutting-edge multihead AI integration platform designed to analyze and respond to complex scenarios. By leveraging a combination of AI models through advanced routing and weighting algorithms, AI-blue provides nuanced and intelligent insights into a wide range of dynamic real-world problems.
 
+![AI Blue Logo](AIblue.jpeg)
+
 ## Getting Started
 
 ### Prerequisites
