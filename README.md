@@ -4,7 +4,7 @@
 
 AI Blue is a cutting-edge multihead AI integration platform designed to analyze and respond to complex scenarios. By leveraging a combination of AI models through advanced routing and weighting algorithms, AI Blue provides nuanced and intelligent insights into a wide range of dynamic real-world problems.
 
-![AI Blue Logo](AIblue.jpeg)
+![AI Blue Logo](anime_ai_blue.png)
 
 ## Getting Started
 
@@ -26,11 +26,11 @@ We've created a showcase for LLamaindex and Trulen to evaluate RAG and ChromaDB.
 
 1. Clone the repository:
    ```console
-   git clone https://github.com/yourusername/AI-blue.git
+   git clone https://github.com/yourusername/ai-blue.git
    ```
 2. Navigate to the AI-blue directory:
    ```console
-   cd AI-blue
+   cd ai-blue
    ```
 3. Install the required packages:
    ```console
