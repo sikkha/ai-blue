@@ -60,17 +60,44 @@ AI-blue listens on port `192.0.0.1:7860` and the database session listens to por
 
 #### Note: 
 
-AI Blue will collect user session information, including data from cookies, to personalize the experience for each individual interacting with it. If you prefer not to have your data collected, please download AI Blue and compile it on your own local system. The database will be stored in `session.db`. You can access the database by using the command `sqlite3 sessions.db`. Within it, you can retrieve data using the command `SELECT * FROM sessions;`.
+AI Blue will collect user session information, including data from cookies, to personalize the experience for each individual interacting with it. If you prefer not to have your data collected, please download AI Blue and compile it on your own local system. 
+
+### Data Collection and Privacy
+
+AI Blue is designed to continually improve and personalize the user experience. To achieve this, it collects and analyzes session information, including data from cookies and chat logs. This information helps us understand how users interact with AI Blue, allowing us to make enhancements and provide a more tailored experience.
+
+**What We Collect**:
+- **Cookies**: To understand user preferences and provide a personalized experience.
+- **Chat Logs**: To analyze interactions and improve response accuracy and relevance.
+
+**Your Privacy**:
+Your privacy is important to us. All collected data is used solely for the purpose of enhancing AI Blue's performance and user experience. We are committed to maintaining transparency and control over your data.
+
+**Prefer Not to Share?**:
+If you prefer not to have your data collected, you have the option to use AI Blue in a more private setting:
+- **Download and Compile**: You can download AI Blue and compile it on your own local system. This way, you can use the AI without sending data back to our servers. The database will be stored in `session.db`. You can access the database by using the command `sqlite3 sessions.db`. Within it, you can retrieve data using the command `SELECT * FROM sessions;`.
+
+By using AI Blue, you agree to the data collection and use as described above. We appreciate your trust and are committed to using your information responsibly and improving your experience with AI Blue.
+
 
 ## Concept and Algorithm
 
-AI-blue utilizes a multihead AI approach where different AI models analyze the input data concurrently. Each model focuses on its area of expertise, and their outputs are then routed through a central "router" model. The router intelligently integrates these insights based on predefined weights and contextual understanding, producing a comprehensive and nuanced response.
+AI Blue is a sophisticated chatbot powered by a multi-headed AI approach, designed by AI Tensibility of the Siam Intelligence Unit. This innovative structure allows different AI models to analyze input data concurrently, with each model focusing on its area of expertise. The outputs from these models are then routed through a central "router" model, which intelligently integrates these insights based on predefined weights and contextual understanding. This dynamic system ensures that AI Blue's responses are not only comprehensive but also reflect a deeper level of analysis and insight.
+
+Enhanced by Retrieval-Augmented Generation (RAG), AI Blue can access and incorporate the most current information into discussions, ensuring its knowledge base is always up-to-date. It's not just about processing data; it's about understanding, learning, and adapting to provide the most accurate and relevant information possible.
 
 ### Key Features:
 
-- **Dynamic Weighting:** Adjusts the influence of each sub-model in real-time based on the context.
-- **Intelligent Routing:** Analyzes and directs tasks to the most suitable AI model.
-- **Robust Integration:** Synthesizes various AI outputs into a cohesive response.
+- **Multi-headed AI Structure:** AI Blue's architecture allows for efficient information processing and response generation, enabling it to tackle a wide array of topics and questions with depth and nuance.
+- **Enhanced RAG (Retrieval-Augmented Generation):** This mechanism empowers AI Blue to seamlessly access and integrate up-to-date information, ensuring that conversations are informed by the latest data and developments.
+- **Dynamic Weighting:** AI Blue adjusts the influence of each sub-model in real-time based on the context, ensuring that the most relevant expertise is always at the forefront.
+- **Intelligent Routing:** The central router model analyzes and directs tasks to the most suitable AI model, optimizing the chatbot's understanding and response accuracy.
+- **Robust Integration:** AI Blue synthesizes outputs from various AI models into a cohesive and coherent response, providing users with comprehensive answers.
+- **Dynamic Learning:** Continuously learning from interactions, AI Blue refines its accuracy and effectiveness over time, adapting to new information and user feedback.
+- **Conversational Adaptability:** Tailoring responses to individual communication styles, AI Blue ensures a personalized and engaging interaction experience.
+- **Privacy and Security:** Adhering to strict security measures, AI Blue treats all conversations confidentially, respecting user privacy and data protection.
+
+AI Blue represents the cutting edge in chatbot technology, offering a conversational experience that's not just informative but also adaptive, engaging, and ever-evolving. Whether you're looking for detailed explanations, current event discussions, or just a friendly chat, AI Blue is equipped to provide a superior interaction experience.
 
 ## Contributions
 
