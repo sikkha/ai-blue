@@ -1,8 +1,8 @@
-# AI-blue
+# AI Blue
 
 ## Project Overview
 
-AI-blue is a cutting-edge multihead AI integration platform designed to analyze and respond to complex scenarios. By leveraging a combination of AI models through advanced routing and weighting algorithms, AI-blue provides nuanced and intelligent insights into a wide range of dynamic real-world problems.
+AI Blue is a cutting-edge multihead AI integration platform designed to analyze and respond to complex scenarios. By leveraging a combination of AI models through advanced routing and weighting algorithms, AI Blue provides nuanced and intelligent insights into a wide range of dynamic real-world problems.
 
 ![AI Blue Logo](AIblue.jpeg)
 
@@ -10,10 +10,10 @@ AI-blue is a cutting-edge multihead AI integration platform designed to analyze 
 
 ### Prerequisites
 
-Ensure you have Python installed on your system. AI-blue is built to be simple and straightforward, requiring only three main files to function:
+Ensure you have Python installed on your system. AI Blue is built to be simple and straightforward, requiring only three main files to function:
 
 1. `requirements.txt` - Lists all the necessary Python packages.
-2. `ai_blue_prototype.py` - The main Python script for the AI-blue model.
+2. `ai_blue_prototype.py` - The main Python script for the AI Blue model.
 3. `session_manager.py` - The user session management engine.
 
 ### Option
@@ -40,7 +40,7 @@ We've created a showcase for LLamaindex and Trulen to evaluate RAG and ChromaDB.
 
 ### Running the Application
 
-To run AI-blue, use the following command:
+To run AI Blue, use the following command:
 
 ```console
 nohup python session_manager.py &
@@ -52,7 +52,7 @@ nohup python ai_blue_prototype.py &
 
 Alternatively, you can use `screen` for session management.
 
-AI-blue listens on port `192.0.0.1:7860` and the database session listens to port `192.0.0.1:5001`. You can experiment with the live model at:
+AI Blue listens on port `192.0.0.1:7860` and the database session listens to port `192.0.0.1:5001`. You can experiment with the live model at:
 
 - Local: `http://192.0.0.1:7860/`
 - Public IP: `http://34.121.86.8:7860/`
