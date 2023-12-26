@@ -58,10 +58,6 @@ AI-blue listens on port `192.0.0.1:7860` and the database session listens to por
 - Public IP: `http://34.121.86.8:7860/`
 - Short URL: [bit.ly/ai-blue](http://bit.ly/ai-blue)
 
-#### Note: 
-
-AI Blue will collect user session information, including data from cookies, to personalize the experience for each individual interacting with it. If you prefer not to have your data collected, please download AI Blue and compile it on your own local system. 
-
 ### Data Collection and Privacy
 
 AI Blue is designed to continually improve and personalize the user experience. To achieve this, it collects and analyzes session information, including data from cookies and chat logs. This information helps us understand how users interact with AI Blue, allowing us to make enhancements and provide a more tailored experience.
