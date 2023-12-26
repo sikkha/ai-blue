@@ -25,30 +25,30 @@ We've created a showcase for LLamaindex and Trulen to evaluate RAG and ChromaDB.
 ### Installation
 
 1. Clone the repository:
-   \```sh
+   ```console
    git clone https://github.com/yourusername/AI-blue.git
-   \```
+   ```
 2. Navigate to the AI-blue directory:
-   \```sh
+   ```console
    cd AI-blue
-   \```
+   ```
 3. Install the required packages:
-   \```sh
+   ```console
    pip install -r requirements.txt
-   \```
+   ```
 
 
 ### Running the Application
 
 To run AI-blue, use the following command:
 
-\```sh
+```console
 nohup python session_manager.py &
-\```
+```
 
-\```sh
+```console
 nohup python ai_blue_prototype.py &
-\```
+```
 
 Alternatively, you can use `screen` for session management.
 
