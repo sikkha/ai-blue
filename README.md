@@ -52,6 +52,13 @@ nohup python ai_blue_prototype.py &
 
 Alternatively, you can use `screen` for session management.
 
+```console
+screen
+python ai_blue_prototype.py
+```
+
+And press `Ctrl-A, d` to exit that session. You can also use screen commmand `screen -ls` to monitor and `screen -r SCREEN-ID`return to specific screen session.
+
 AI Blue listens on port `192.0.0.1:7860` and the database session listens to port `192.0.0.1:5001`. You can experiment with the live model at:
 
 - Local: `http://192.0.0.1:7860/`
