@@ -57,7 +57,7 @@ screen
 python session_manager.py
 ```
 
-And press `Ctrl-A, d` to exit that session. And start AI Blue module.
+And press `Ctrl-a, d` to exit that session. And start AI Blue module.
 
 ```console
 screen
