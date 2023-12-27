@@ -50,14 +50,22 @@ nohup python session_manager.py &
 nohup python ai_blue_prototype.py &
 ```
 
-Alternatively, you can use `screen` for session management.
+Alternatively, you can use `screen` for session management, and start the user_management module.
+
+```console
+screen
+python session_manager.py
+```
+
+And press `Ctrl-A, d` to exit that session. And start AI Blue module.
 
 ```console
 screen
 python ai_blue_prototype.py
 ```
+And press `Ctrl-A, d` to exit that session once again.
 
-And press `Ctrl-A, d` to exit that session. You can also use screen commmand `screen -ls` to monitor and `screen -r SCREEN-ID`return to specific screen session.
+You can also use screen commmand `screen -ls` to monitor and `screen -r SCREEN-ID`return to specific screen session.
 
 AI Blue listens on port `192.0.0.1:7860` and the database session listens to port `192.0.0.1:5001`. You can experiment with the live model at:
 
