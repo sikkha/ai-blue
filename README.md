@@ -63,7 +63,7 @@ And press `Ctrl-A, d` to exit that session. And start AI Blue module.
 screen
 python ai_blue_prototype.py
 ```
-And press `Ctrl-A, d` to exit that session once again.
+And press `Ctrl-a, d` to exit that session once again.
 
 You can also use screen commmand `screen -ls` to monitor and `screen -r SCREEN-ID`return to specific screen session.
 
